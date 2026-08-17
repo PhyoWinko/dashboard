@@ -2,6 +2,10 @@ li {
     list-style: none;
 }
 
+body {
+    margin: 0;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 6fr;
@@ -9,13 +13,23 @@ li {
 
 .sidebar {
     grid-column: 1 / 2;
+    background-color: lightblue;
+    display: grid;
+    grid-auto-flow: row;
 }
 
-.sidebar ul {
+li svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar li {
     /* i am not sure about this yet */
     display: grid;
+    grid-auto-flow: column;
     gap: 20px;
 }
+
 
 .header {
     grid-column: 2;
