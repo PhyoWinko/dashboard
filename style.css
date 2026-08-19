@@ -8,14 +8,33 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 4fr 4fr 4fr;
 }
 
 .sidebar {
     grid-column: 1 / 2;
+    grid-row: 1 / -1;
     background-color: lightblue;
     display: grid;
     grid-auto-flow: row;
+}
+
+.sidebar h2 {
+    grid-row: 1 / 2;
+}
+
+.first-sidebar-section, .second-sidebar-section {
+    display: grid;
+    gap: 0.5em;
+}
+
+.first-sidebar-section li, .second-sidebar-section li {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5em;
 }
 
 li svg {
@@ -23,17 +42,18 @@ li svg {
     height: 20px;
 }
 
-.sidebar li {
-    /* i am not sure about this yet */
-    display: grid;
-    grid-auto-flow: column;
-    gap: 20px;
-}
-
-
-.header {
+.header-1 {
     grid-column: 2;
     grid-row: 1 / 3;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.profile-header {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .content {
