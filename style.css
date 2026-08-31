@@ -2,8 +2,11 @@ li {
     list-style: none;
 }
 
-body {
+html, body {
     margin: 0;
+    height: 100vh;
+    font-family: Helvetica;
+    padding: 0;
 }
 
 .grid-container {
@@ -12,12 +15,18 @@ body {
     grid-template-rows: 2fr 4fr 4fr 4fr;
 }
 
+.grid-container div {
+    padding: 20px;
+}
+
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-    background-color: lightblue;
+    background-color: blue;
+    color: white;
     display: grid;
     grid-auto-flow: row;
+    font-size: 1.2em;
 }
 
 .sidebar h2 {
